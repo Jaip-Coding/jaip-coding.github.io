@@ -3,86 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <title>Jaip Coding</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="logo_transparent.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato";
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-image img {
+            padding: 1% 3%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo-text h1 {
+            /*color: white;
+            text-align: left;
+            padding: 1% 3%;
+            text-decoration: none;*/
+            font-size: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: start;
+            justify-content: start
+        }
+        
+        nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0px;
+            background-color: #333;
+            padding: 10px;
+            width: 300px;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        #menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        #menu-toggle:checked + nav {
+            display: flex;
+        }
+
+        #menu-label {
+            font-size: 30px;
+        }
+
+        .feature-box {
+            width: 30%;
+            padding: 7px;
+            margin: 7px;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .background-image {
+            position: relative;
+            text-align: center;
+            color: white;
+            z-index: -5;
+        }
+        
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3vw;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header {
+                /*flex-direction: column;*/
+                align-items: center;
+            }
+
+            nav {
+                width: 95.5%;
+                top: 70px;
+                left: 0;
+            }
+
+            /*#menu-toggle {
+                display: block;
+            }
+
+            #menu-toggle + nav {
+                display: none;
+            }*/
+
+            .feature-box {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <div class="logo-image">
+                <img src="logo_transparent.png">
+            </div>
+            <div class="logo-text">
+                <h1>Jaip Coding</h1>
+            </div>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label id="menu-label" for="menu-toggle">&#9776</label>
+        <nav>
+            <p><a href="https://github.com/Jaip-Coding/Imperator">Imperator</a></p>
+            <p><a href="https://github.com/Jaip-Coding/NONE">NONE</a></p>
+            <p><a href="https://github.com/Jaip-Coding/viWeb">viWeb</a></p>
+        </nav>
+    </header>
 
-<div class="title">
-  <div class="logo">
-    <div class="logo-image">
-      <img src="logo_transparent.png">
+    <div class="background-image">
+        <center><img src="Code1.png" style="width: 100%"></center>
+        <div class="centered-text"><h1>Future programming</h1></div>
     </div>
-    <div class="logo-text">
-      <h1>Jaip Coding</h1>
+
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+        <div class="feature-box">
+            <p style="color: #226E93; font-size: 25px;"><a href="https://github.com/Jaip-Coding/Imperator">Imperator</a></p>
+            <p style="padding: 0px 30px; font-size: 15px;">Imperator is an 80s-like programming language created in 2023.  You can find the source code open source on Github.</p>
+        </div>
+        <div class="feature-box">
+            <p style="color: #226E93; font-size: 25px;"><a href="https://github.com/Jaip-Coding/NONE">NONE</a></p>
+            <p style="padding: 0px 30px; font-size: 15px;">NONE is an esoteric programming language created in 2023. You can find the source code - less than 200 lines of code - open source on Github.</p>
+        </div>
+        <div class="feature-box">
+            <p style="color: #226E93; font-size: 25px;"><a href="https://github.com/Jaip-Coding/viWeb">viWeb</a></p>
+            <p style="padding: 0px 30px; font-size: 15px;">viWeb (VisualWebdevelopment) is a tool for writing HTML code in Python. It converts your viWeb Python script directly to HTML. More information on Github.</p>
+        </div>
     </div>
-  </div>
-</div>
 
-<!--Thanks to w3schools.com for the slide engine-->
-<div class="slideshow-container">
+    <center><footer style="color: gray;">© 2023 Jaip Coding</footer></center>
+    <br>
 
-<!--Thanks to jamesmarkosborne from Pixabay for the image-->
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="Code1.png" style="width:100%">
-  <div class="text">Future programming</div>
-</div>
-
-<!--Thanks to izzyestabrook from Pixabay for the image-->
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="Laptop1.png" style="width:100%">
-  <div class="text">Made for developers</div>
-</div>
-
-<!--Thanks to Saharsh_wadekar from Pixabay for the image-->
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="Code2.png" style="width:100%">
-  <div class="text2">Jaip Coding</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-
-<div class="dots">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<br>
-
-<div class="feautured">
-  <div class="info-block">
-    <div class="info-block-text">
-      <h1>NONE Compiler</h1>
-      <p>NONE is an esoteric programming language created in 2023. You can find the source code - less than 200 lines of code - open source on Github.</p>
-      <a href="https://github.com/Jaip-Coding/NONE">❯ Source code</a>
-    </div>
-  </div>
-  <div class="info-block">
-    <div class="info-block-text">
-      <h1>viWeb</h1>
-      <p>viWeb (VisualWebdevelopment) is a tool for writing HTML code in Python. It converts your viWeb Python script directly to HTML. More information on Github.</p>
-      <a href="https://github.com/Jaip-Coding/viWeb">❯ Source code</a>
-    </div>
-  </div>
-  <div class="info-block">
-    <div class="info-block-text">
-      <h1>Welcome!</h1>
-      <p>This is my website where I will share all my projects. Have fun!</p>
-    </div>
-  </div>
-</div>
-
-<center><footer>
-  <p class="footer-copyright">© 2023 Jaip Coding</p>
-</footer></center>
-<script src="script.js"></script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('change', function() {
+            var nav = document.querySelector('nav');
+            nav.style.display = this.checked ? 'flex' : 'none';
+        });
+    </script>
 </body>
 </html>
